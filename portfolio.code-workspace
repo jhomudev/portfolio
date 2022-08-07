@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "..\\js course"
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\colegio_phppuro"
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\colegio"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "portfolio"
+  }
+}
