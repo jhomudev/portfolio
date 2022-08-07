@@ -146,22 +146,9 @@ header.change {
 header.change .menu li a {
   color: var(--dark-blue);
 }
-.menu li::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: var(--light-cyan);
-  height: 2px;
-  width: 0;
-  transition: all 0.3s;
-}
 .menu li:hover {
   letter-spacing: 1px;
   font-weight: bold;
-}
-.menu li:hover::after {
-  width: 100%;
 }
 .menu #btn-email {
   width: 100%;
@@ -190,16 +177,17 @@ header.change .menu li a {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-.send {
-  width: 50px;
-  height: 50px;
-}
 .bar {
   display: none;
   color: var(--dark);
   position: absolute;
   right: 50px;
   font-size: 20px;
+}
+.send {
+  width: 50px;
+  height: 50px;
+  margin-right:  20px;
 }
 .send img {
   width: 100%;
@@ -242,19 +230,20 @@ section {
   align-items: center;
 }
 .about-me .contain {
-  width: 80%;
+  width: 90%;
   padding: 10px;
   margin: auto;
   position: relative;
   display: grid;
   grid-template-columns: 3fr 2fr;
   place-items: center;
+  grid-gap:70px;
 }
 .about-me .contain .box {
   position: relative;
   width: 400px;
   height: 400px;
-  margin: 60px auto 30px;
+  margin: 60px auto 0;
   background: var(--dark);
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -341,7 +330,7 @@ section {
   opacity: 0;
 }
 .about-me .contain .box .content button {
-  background: linear-gradient(315deg, var(--cyan), var(--purple));
+  background: var(--cyan);
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -350,9 +339,9 @@ section {
   margin: 5px auto;
   padding: 6px 15px;
   color: var(--grey);
-  outline: 2px solid var(--dark-grey);
   transition: all 0.3s;
   margin-top: 15px;
+  font-weight:normal;
 }
 .about-me .contain .box .content button:hover {
   letter-spacing: 2px;
@@ -730,12 +719,6 @@ footer .dato img {
 /* ! FINISH FOOTER */
 
 @media screen and (max-width: 1268px) {
-  .about-me .contain .box .content h2 {
-    font-size: 18px;
-  }
-  .about-me .contain .box .content button {
-    font-size: 15px;
-  }
   .services .contain article {
     display: grid;
     grid-template-columns: 1fr;
@@ -789,6 +772,12 @@ footer .dato img {
   section {
     padding: 80px 5% !important;
   }
+  .about-me .contain .box .content h2 {
+    font-size: 18px;
+  }
+  .about-me .contain .box .content button {
+    font-size: 15px;
+  }
   .about-me .contain {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -796,8 +785,8 @@ footer .dato img {
   .about-me .contain .box {
     grid-row: 1/2;
     grid-template-columns: 1fr;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
   }
   .skills .contain {
     padding: 0;
@@ -878,13 +867,6 @@ footer .dato img {
   }
   .skills .contain article img {
     width: 100px;
-  }
-  .contain .box {
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
   }
   .services .contain article {
     transform: scale(0.9);
