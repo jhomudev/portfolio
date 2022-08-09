@@ -3,7 +3,7 @@
   --cyan: #00c2cb;
   --light-cyan: #05ebeb;
   --dark-blue: #0f3957;
-  --blue: #2343c2;
+  --blue: #0073d7;
   --purple: #5f27cd;
   --dark-purple: #341f97;
   --sky: #54a0ff;
@@ -43,7 +43,7 @@
   color: var(--red) !important;
 }
 .text-main {
-  font-size: 60px;
+  font-size: 50px;
 }
 .text-1 {
   font-size: 35px;
@@ -187,7 +187,7 @@ header.change .menu li a {
 .send {
   width: 50px;
   height: 50px;
-  margin-right:  20px;
+  margin-right: 20px;
 }
 .send img {
   width: 100%;
@@ -210,6 +210,112 @@ header.change .menu li a {
 section {
   padding: 80px 10%;
 }
+/* ! send email */
+.boxSend {
+  position: fixed;
+  width: 22em;
+  height: 40em;
+  right: 90px;
+  background: var(--grey);
+  top: 90px;
+  z-index: 1000;
+  padding: 30px 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.boxSend.hidden {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+.boxSend #btnCerrar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: var(--blue);
+  padding: 1px 7px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  color: var(--light);
+  cursor: pointer;
+}
+.boxSend form p.send-message {
+  color: var(--blue);
+}
+.boxSend form p.send-message-error {
+  color: var(--red);
+}
+.boxSend span {
+  color: var(--blue);
+}
+.boxSend form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.boxSend form .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.boxSend form .campo label {
+  filter: brightness(90%);
+  color: var(--dark);
+  -webkit-filter: brightness(90%);
+}
+.boxSend form .campo input {
+  width: 100%;
+  height: 3em;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-grey);
+}
+.boxSend form .campo textarea {
+  resize: none;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-grey);
+}
+.boxSend form .campo input:focus,
+.boxSend form .campo textarea:focus {
+  border: 2px solid var(--blue);
+  outline: none;
+}
+.boxSend form .submit {
+  padding: 13px;
+  background: var(--blue);
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: var(--light);
+}
+.boxSend form .submit:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}
+
+/* ! finish email */
+
 /** about-me */
 .about-me {
   position: relative;
@@ -237,7 +343,7 @@ section {
   display: grid;
   grid-template-columns: 3fr 2fr;
   place-items: center;
-  grid-gap:70px;
+  grid-gap: 70px;
 }
 .about-me .contain .box {
   position: relative;
@@ -341,7 +447,7 @@ section {
   color: var(--grey);
   transition: all 0.3s;
   margin-top: 15px;
-  font-weight:normal;
+  font-weight: normal;
 }
 .about-me .contain .box .content button:hover {
   letter-spacing: 2px;
@@ -799,6 +905,9 @@ footer .dato img {
   .bar {
     display: block;
   }
+  header .send {
+    display: none;
+  }
   .menu {
     position: fixed;
     bottom: 0;
@@ -839,6 +948,12 @@ footer .dato img {
   }
 }
 @media screen and (max-width: 806px) {
+  .boxSend {
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   footer {
     grid-template-columns: auto;
     grid-template-areas:
@@ -883,16 +998,16 @@ footer .dato img {
     -o-transform: scale(1);
   }
   .text-main {
-    font-size: 35px;
-  }
-  .text-1 {
     font-size: 32px;
   }
+  .text-1 {
+    font-size: 29px;
+  }
   .text-2 {
-    font-size: 17px;
+    font-size: 16px;
   }
   .text-3 {
-    font-size: 14px;
+    font-size: 13px;
   }
   .about-me .contain {
     margin-bottom: 40px;
