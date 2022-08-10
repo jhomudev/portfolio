@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/Icono-DevMc .svg" type="image/ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?1.0" media="all">
     <script src="https://kit.fontawesome.com/a8527aea5d.js" crossorigin="anonymous"></script>
     <title>DevMc | Portafolio</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -14,7 +14,7 @@
 
 <body>
     <header id="nav">
-        <a class="icono" href="index.html">
+        <a class="icono" href="index.php">
             <img src="img/DevMc.svg" alt="logotype" id="icono-owl">
         </a>
         <ul class="menu">
@@ -30,6 +30,63 @@
             <img src="img/send.png" alt="">
         </div>
     </header>
+    <div class="boxSend hidden">
+        <div id="btnCerrar"><i class="fas fa-xmark"></i></div>
+        <span class="text-center text-2 bold">Envíame un correo</span>
+        <p class="text-3">Envíame un email y comunícate conmigo. Déjame tus datos y te contactaré.</p>
+        <form action="index.php" method="post">
+            <div class="campo">
+                <label for="" class="text-3">Tu Nombre</label>
+                <input type="text" name="txNombres" value="fghfgh" required>
+            </div>
+            <div class="campo">
+                <label for="" class="text-3">Tu Correo</label>
+                <input type="email" name="txCorreo" required>
+            </div>
+            <div class="campo">
+                <label for="" class="text-3">Asunto</label>
+                <input type="text" name="txAsunto" value="gfhfgh" required>
+            </div>
+            <div class="campo">
+                <label for="" class="text-3">Tu Mensaje</label>
+                <textarea name="txMensaje" cols="30" rows="10" required></textarea>
+            </div>
+            <?php 
+                if($_POST){
+                    $correo=$_POST["txCorreo"];
+                    $nombres=$_POST["txNombres"];
+                    $mensaje=$_POST["txMensaje"];
+                                    
+                    $asunto=$_POST["txAsunto"];
+                    $cuerpo='
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                    </head>      
+                    <body>
+                    <h2>De : </h2> <span style="color:blue;">'.$nombres.'</span> 
+                    <h2>Correo : </h2> <span style="color:blue;">'.$correo.'</span> 
+                    <p>'.$mensaje.'</p>  
+                    </body>
+                    </html>
+                    ';
+                    $cabecera="MIME-Version: 1.0\r\n";
+                    $cabecera.="Content-type: text/html; charset=iso-8859-1\r\n";
+                    $miCorreo="jhonancalebm@gmail.com";
+                    if(mail($miCorreo,$asunto,$cuerpo,$cabecera)){
+                        echo'
+                        <p class="send-message text-3"><i class="fas fa-check"></i> Mensaje enviado.</p>
+                        ';
+                    }else{
+                        echo'
+                        <p class="send-message-error text-3"><i class="fas fa-triangle-exclamation"></i> Al parecer hubo un error.</p>
+                        ';
+                    } 
+                }
+            ?>
+            <input type="submit" value="Enviar correo" class="submit">
+        </form>
+    </div>
     <section class="about-me" id="about-me">
         <div class="contain">
             <div class="letras">
@@ -49,7 +106,7 @@
                             <li class="text-3"><a class="decoration-none" href="" target="_blank">Descargar CV</a></li>
                         </ul>
                     </button>
-                    <button class="hire bold border-none" onclick="location.href='http:#contacts'" style="--color:var(--orange);color:var(--dark-blue)"><i class="fa-solid fa-file-contract"></i> Contáctame
+                    <button class="hire bold border-none" onclick="location.href='https:#contacts'" style="--color:var(--orange);color:var(--dark-blue)"><i class="fa-solid fa-file-contract"></i> Contáctame
                     </button>
                 </div>
             </div>
@@ -58,7 +115,7 @@
                     <img src="img/perfil.jpg" alt="">
                     <h2 class="orange">DESARROLLADOR WEB</h2>
                     <h2 class="cyan">DevMc</h2>
-                    <button onclick="location.href='http:#contacts'" class="border-none text-2 bold">Contáctame</button>
+                    <button onclick="location.href='https:#contacts'" class="border-none text-2 bold">Contáctame</button>
                 </div>
             </div>
         </div>
@@ -160,7 +217,7 @@
             Mi arduo trabajo se refleja en las cosas que he logrado. Aquí te muestro los proyectos que ralizado. 
         </p>
         <div class="contain">
-            <a href="https://owlpays.com/" target="_blank">
+            <a href="https://owlpays.com/owlpays" target="_blank">
                 <div class="boxImg">
                     <img loading="lazy" src="img/owlpays.png" alt="">
                 </div>

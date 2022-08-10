@@ -214,7 +214,7 @@ section {
 .boxSend {
   position: fixed;
   width: 22em;
-  height: 40em;
+  height: auto;
   right: 90px;
   background: var(--grey);
   top: 90px;
