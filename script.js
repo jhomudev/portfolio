@@ -47,6 +47,15 @@ btnSend.onclick = showForm;
 btnSendButton.onclick = showForm;
 btnSendClose.onclick = showForm;
 
+// RECARGAR PAGINA
+function reload() {
+  setTimeout(function(){
+    location.reload()
+  },1200)
+  
+}
+
+
 // ENVIAR AJAX
 
 //funcion ajax de registrar 

@@ -15,8 +15,8 @@
         <head>
         </head>      
         <body>
-        <strong>De : </strong> <span style="color:blue;">'.$nombres.'</span> 
-        <strong>Correo : </strong> <span style="color:blue;">'.$correo.'</span> 
+        <strong>De : </strong> <span style="color:blue;">'.$nombres.'</span></br> 
+        <strong>Correo : </strong> <span style="color:blue;">'.$correo.'</span></br> 
         <p>'.$mensaje.'</p>  
         </body>
         </html>
@@ -26,11 +26,14 @@
         $miCorreo="jhonancalebm@gmail.com";
         if(mail($miCorreo,$asunto,$cuerpo,$cabecera)){
             $res='
-            <p class="ok"><i class="fas fa-check"></i> Mensaje enviado.</p>
+            <h4 class="ok"><i class="fas fa-check"></i> Mensaje enviado.</h4>
+            <script>
+            reload();
+            </script>
             ';
         }else{
             $res='
-            <p class="warning"><i class="fas fa-triangle-exclamation"></i> Al parecer hubo un error.</p>
+            <h4 class="warning"><i class="fas fa-triangle-exclamation"></i> Al parecer hubo un error.</h4>
             ';
         } 
     }
