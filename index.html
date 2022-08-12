@@ -37,7 +37,8 @@
         <form id="formSend">
             <div class="campo">
                 <label for="" class="text-3">Tu Nombre</label>
-                <input type="text" name="txNombres" id="txNombres" required>
+                <input type="text" name="txNombres" id="txNombres"
+                    onkeyup="javascript:this.value=this.value.toUpperCase();" required>
             </div>
             <div class="campo">
                 <label for="" class="text-3">Tu Correo</label>
@@ -45,7 +46,8 @@
             </div>
             <div class="campo">
                 <label for="" class="text-3">Asunto</label>
-                <input type="text" name="txAsunto" id="txAsunto" required>
+                <input type="text" name="txAsunto" id="txAsunto"
+                    onkeyup="javascript:this.value=this.value.toUpperCase();" required>
             </div>
             <div class="campo">
                 <label for="" class="text-3">Tu Mensaje</label>
@@ -58,8 +60,9 @@
     <section class="about-me" id="about-me">
         <div class="contain">
             <div class="letras">
-                <h1 class="text-main">Hola! Soy <span class="cyan bold">Jhonan Muñoz</span> 
-<span class="orange">Desarrollador Web.</span></h1><br>
+                <h1 class="text-main">Hola! Soy <span class="cyan bold">Jhonan Muñoz</span>
+                    <span class="orange">Desarrollador Web.</span>
+                </h1><br>
                 <p class="text-2" style="line-height: 1.5em;">¿Cómo estas? Este es mi portafolio en el cual quisiera que
                     vieras todo lo que puedo hacer y brindarte. Estudié Desarrollo Web, tambien lenguajes de
                     programación como JavaScript, PHP, python, C#, Java , además del manejo de datos con SQL Languaje y
@@ -70,11 +73,14 @@
                         <i class="fa-solid fa-download"></i>&nbsp;
                         Descargar CV
                         <ul class="decoration-none">
-                            <li class="text-3"><a class="decoration-none" href="https://jhonancaleb.github.io" target="_blank">Ver CV online</a></li>
+                            <li class="text-3"><a class="decoration-none" href="https://jhonancaleb.github.io"
+                                    target="_blank">Ver CV online</a></li>
                             <li class="text-3"><a class="decoration-none" href="" target="_blank">Descargar CV</a></li>
                         </ul>
                     </button>
-                    <a class="btn hire bold border-none desplazar" href="#contacts" style="--color:var(--orange);color:var(--dark-blue)"><i class="fa-solid fa-file-contract"></i> &nbsp;Contáctame
+                    <a class="btn hire bold border-none desplazar" href="#contacts"
+                        style="--color:var(--orange);color:var(--dark-blue)"><i class="fa-solid fa-file-contract"></i>
+                        &nbsp;Contáctame
                     </a>
                 </div>
             </div>
@@ -91,40 +97,51 @@
     <section class="skills" id="skills">
         <h2 class="title text-center text-1">Mis Habilidades</h2>
         <p class="text-center text-2">
-            Como mencioné, estudié <span class="sky bold">programación</span> y <span class="sky bold">desarrollo de software</span> además de Diseño Web. Lo siguiente es lo que puedo hacer.
+            Como mencioné, estudié <span class="sky bold">programación</span> y <span class="sky bold">desarrollo de
+                software</span> además de Diseño Web. Lo siguiente es lo que puedo hacer.
         </p>
         <div class="contain">
             <article style="--text:'HTML';--color:#ff5722">
-                <img loading="lazy" src="img/html-5.png" alt="html" >
-                <p class="text-3">HTML el lenguaje que define la estructura de la Web. Puedo crear paginas con este lenguaje junto a CSS y JavaScript para que la interfaz sea lo más estética y dinámica posible</p>
+                <img loading="lazy" src="img/html-5.png" alt="html">
+                <p class="text-3">HTML el lenguaje que define la estructura de la Web. Puedo crear paginas con este
+                    lenguaje junto a CSS y JavaScript para que la interfaz sea lo más estética y dinámica posible</p>
             </article>
             <article style="--text:'CSS';--color:#2196f3">
-                <img loading="lazy" src="img/css-3.png" alt="html" >
-                <p class="text-3">CSS el lenguaje que da vida a la páginas y aplaciones web. Si quieres tener una interfaz muy atractiva no dudes en pedirmela.</p>
+                <img loading="lazy" src="img/css-3.png" alt="html">
+                <p class="text-3">CSS el lenguaje que da vida a la páginas y aplaciones web. Si quieres tener una
+                    interfaz muy atractiva no dudes en pedirmela.</p>
             </article>
             <article style="--text:'JavaScript';--color:#f5de19">
                 <img loading="lazy" src="img/js.png" alt="html">
-                <p class="text-3">JavaScript el lenguaje de programación número uno en la Web. Tener solo HTML Y CSS no basta para tener una interfaz completa. Por eso usamos este lenguaje, además que con este podemas crear aplicaciones funcionales.</p>
+                <p class="text-3">JavaScript el lenguaje de programación número uno en la Web. Tener solo HTML Y CSS no
+                    basta para tener una interfaz completa. Por eso usamos este lenguaje, además que con este podemas
+                    crear aplicaciones funcionales.</p>
             </article>
             <article style="--text:'PHP';--color:#8f9ed1">
-                <img loading="lazy" src="img/php.png" alt="html" >
-                <p class="text-3">PHP otro lenguaje de programación muy importante en la Web. Si tienes un negocio, este lenguaje es muy necesario para ofrecer los productos que tienes trayendo la información necesaria desde una base de datos.</p>
+                <img loading="lazy" src="img/php.png" alt="html">
+                <p class="text-3">PHP otro lenguaje de programación muy importante en la Web. Si tienes un negocio, este
+                    lenguaje es muy necesario para ofrecer los productos que tienes trayendo la información necesaria
+                    desde una base de datos.</p>
             </article>
             <article style="--text:'Python';--color:#78e0ea">
-                <img loading="lazy" src="img/piton.png" alt="html" >
-                <p class="text-3">Python un lenguaje muy reconocido con el cual podemos crear aplicaciones web, analizar datos, automatizar operaciones y crear aplicaciones empresariales fiables y escalables. </p>
+                <img loading="lazy" src="img/piton.png" alt="html">
+                <p class="text-3">Python un lenguaje muy reconocido con el cual podemos crear aplicaciones web, analizar
+                    datos, automatizar operaciones y crear aplicaciones empresariales fiables y escalables. </p>
             </article>
             <article style="--text:'Git';--color:#f34f29">
-                <img loading="lazy" src="img/git.svg" alt="html" >
-                <p class="text-3">Git, una herramienta de control de versiones muy necesaria con la cual podemos trabajar en equipo y dividir las tareas para ser mas productivos. Asi es tambien puedo trabajar en equipo para tu empresa.</p>
+                <img loading="lazy" src="img/git.svg" alt="html">
+                <p class="text-3">Git, una herramienta de control de versiones muy necesaria con la cual podemos
+                    trabajar en equipo y dividir las tareas para ser mas productivos. Asi es tambien puedo trabajar en
+                    equipo para tu empresa.</p>
             </article>
-            
+
         </div>
     </section>
     <section class="services" id="services">
-        <h2 class="title text-center text-1 ">¿Que es lo que te puedo <span class="orange">ofrecer</span> con mis <span class="orange">habilidades</span>?</h2>
+        <h2 class="title text-center text-1 ">¿Que es lo que te puedo <span class="orange">ofrecer</span> con mis <span
+                class="orange">habilidades</span>?</h2>
         <p class="text-center text-2">
-            Puedo ofrecerte los siguientes servicios: 
+            Puedo ofrecerte los siguientes servicios:
         </p>
         <div class="contain">
             <article style="--color:var(--cyan);">
@@ -133,56 +150,68 @@
                 </div>
                 <div class="descri">
                     <h3 class="text-2 sky bold">Diseño creativo</h3>
-                    <p class="text-3">Un buen diseño web atractivo le ayuda a mantener sus clientes potenciales en su sitio, que es el cara de tu negocio.</p>
-                    <a href="#contacts" class="orange bold desplazar">Contáctame<i class="fa-solid fa-chevron-right"></i></a>
+                    <p class="text-3">Un buen diseño web atractivo le ayuda a mantener sus clientes potenciales en su
+                        sitio, que es el cara de tu negocio.</p>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame<i
+                            class="fa-solid fa-chevron-right"></i></a>
                 </div>
-            </article>      
+            </article>
             <article style="--color:var(--blue);">
                 <div class="boxImg">
                     <img loading="lazy" src="img/developer.svg" alt="">
                 </div>
                 <div class="descri">
                     <h3 class="text-2 sky bold">Desarrollo y mantenimiento</h3>
-                    <p class="text-3">Conozco la importancia del diseño web y puedo ayudarte con el desarrollo y mantenimiento de tu sitio web.</p>
-                    <a href="#contacts" class="orange bold desplazar">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
+                    <p class="text-3">Conozco la importancia del diseño web y puedo ayudarte con el desarrollo y
+                        mantenimiento de tu sitio web.</p>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame <i
+                            class="fa-solid fa-chevron-right"></i></a>
                 </div>
-            </article>      
+            </article>
             <article style="--color:var(--purple);">
                 <div class="boxImg">
                     <img loading="lazy" src="img/social-network.svg" alt="">
                 </div>
                 <div class="descri">
                     <h3 class="text-2 sky bold">Integración de redes sociales</h3>
-                    <p class="text-3">Hoy en día la gente esta conectada en las redes sociales y por eso la  presencia de tus redes en tu sitio web es importante.</p>
-                    <a href="#contacts" class="orange bold desplazar">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
+                    <p class="text-3">Hoy en día la gente esta conectada en las redes sociales y por eso la presencia de
+                        tus redes en tu sitio web es importante.</p>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame <i
+                            class="fa-solid fa-chevron-right"></i></a>
                 </div>
-            </article>      
+            </article>
             <article style="--color:var(--red);">
                 <div class="boxImg">
                     <img loading="lazy" src="img/eficaz.svg" alt="">
                 </div>
                 <div class="descri">
                     <h3 class="text-2 sky bold">Funcionamiento eficaz</h3>
-                    <p class="text-3"> Es escencial un buen funcionamiento y estabilidad en tu sitio. Esto retiene a las personas.</p>
-                    <a href="#contacts" class="orange bold desplazar">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
+                    <p class="text-3"> Es escencial un buen funcionamiento y estabilidad en tu sitio. Esto retiene a las
+                        personas.</p>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame <i
+                            class="fa-solid fa-chevron-right"></i></a>
                 </div>
-            </article>      
+            </article>
             <article style="--color:var(--green);">
                 <div class="boxImg">
                     <img loading="lazy" src="img/responsive.svg" alt="">
                 </div>
                 <div class="descri">
                     <h3 class="text-2 sky bold">Diseño Responsivo</h3>
-                    <p class="text-3">Tu sitio debe verse bien no solo en computadoras. Hoy en día los móviles son más comunes asi que es necesario adapatar tu sitio con un modo responsivo adaptable al tamaño de dichos dispositivos.</p>
-                    <a href="#contacts" class="orange bold desplazar">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
+                    <p class="text-3">Tu sitio debe verse bien no solo en computadoras. Hoy en día los móviles son más
+                        comunes asi que es necesario adapatar tu sitio con un modo responsivo adaptable al tamaño de
+                        dichos dispositivos.</p>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame <i
+                            class="fa-solid fa-chevron-right"></i></a>
                 </div>
-            </article>                              
+            </article>
         </div>
     </section>
     <section class="projects" id="projects">
-        <h2 class="title text-center text-1 orange">Mis <span class="sky">proyectos</span> te pueden decir lo que <span class="sky">puedo hacer</span>?</h2>
+        <h2 class="title text-center text-1 orange">Mis <span class="sky">proyectos</span> te pueden decir lo que <span
+                class="sky">puedo hacer</span>?</h2>
         <p class="text-center text-2">
-            Mi arduo trabajo se refleja en las cosas que he logrado. Aquí te muestro los proyectos que ralizado. 
+            Mi arduo trabajo se refleja en las cosas que he logrado. Aquí te muestro los proyectos que ralizado.
         </p>
         <div class="contain">
             <a href="https://owlpays.com/owlpays" target="_blank">
@@ -228,20 +257,26 @@
             <h2 class="text-2">Contactos</h2>
             <ul class="decoration-none">
                 <li><a><i class="fa-solid fa-phone"></i><span>+51 993884118</span></a></li>
-                <li><a target="_blank" href="https://api.whatsapp.com/send?phone=51993884118&text=Hola%20Jhonan%2C%20me%20interesa%20tu%20trabajo%20y%20quisiera%20hablar%20sobre%20tus%20servicios."><i class="fa-brands fa-whatsapp"></i><span>+51 993884118</span></a></li>
-                <li><a target="_blank" href="https://mail.google.com/"><i class="fa-solid fa-envelope"></i><span>jhonancalebm@gmail.com</span></a></li>
+                <li><a target="_blank"
+                        href="https://api.whatsapp.com/send?phone=51993884118&text=Hola%20Jhonan%2C%20me%20interesa%20tu%20trabajo%20y%20quisiera%20hablar%20sobre%20tus%20servicios."><i
+                            class="fa-brands fa-whatsapp"></i><span>+51 993884118</span></a></li>
+                <li><a target="_blank" href="https://mail.google.com/"><i
+                            class="fa-solid fa-envelope"></i><span>jhonancalebm@gmail.com</span></a></li>
             </ul>
         </div>
         <div class="siganos">
             <h2 class="text-2 dark-blue">Síganos</h2>
             <ul class="decoration-none">
-                <li><a href="https://www.facebook.com/jhonan.munozcarrillo/" target="_blank"><i class="fa-brands fa-facebook-square"></i><span>Facebook</span></a></li>
-                <li><a href="https://twitter.com/JhonanCaleb" target="_blank"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
-                <li><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a></li>
+                <li><a href="https://www.facebook.com/jhonan.munozcarrillo/" target="_blank"><i
+                            class="fa-brands fa-facebook-square"></i><span>Facebook</span></a></li>
+                <li><a href="https://twitter.com/JhonanCaleb" target="_blank"><i
+                            class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
+                <li><a href="https://github.com" target="_blank"><i
+                            class="fa-brands fa-github"></i><span>GitHub</span></a></li>
             </ul>
         </div>
         <div class="created">
-            <p>CreatedBy <span class="cyan">DevMc | Jhonan Caleb MC</span>. Todos los derechos reservados.</p>             
+            <p>CreatedBy <span class="cyan">DevMc | Jhonan Caleb MC</span>. Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="script.js"></script>
