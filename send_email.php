@@ -15,8 +15,8 @@
         <head>
         </head>      
         <body>
-        <h2>De : </h2> <span style="color:blue;">'.$nombres.'</span> 
-        <h2>Correo : </h2> <span style="color:blue;">'.$correo.'</span> 
+        <strong>De : </strong> <span style="color:blue;">'.$nombres.'</span> 
+        <strong>Correo : </strong> <span style="color:blue;">'.$correo.'</span> 
         <p>'.$mensaje.'</p>  
         </body>
         </html>
