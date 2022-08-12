@@ -1,4 +1,15 @@
-// HEADER ESTILOS AL SCROLEAR ABAJO
+
+//srool suave smooth
+$(document).ready(function(){
+  var ir_a=$(".desplazar");
+  ir_a.click(function(evento){
+    evento.preventDefault();
+    $("body,html").animate({
+        scrollTop:$(this.hash).offset().top,
+    },550);
+})
+
+  // HEADER ESTILOS AL SCROLEAR ABAJO
 var cabeza = $("#nav");
 $(window).scroll(function () {
   if ($(window).scrollTop() > 10) {
@@ -7,6 +18,8 @@ $(window).scroll(function () {
     cabeza.removeClass("change");
   }
 });
+})
+
 
 // MOSTRAR BARRA DE MENU
 const btnBar = document.querySelector(".bar");
@@ -33,3 +46,42 @@ function showForm() {
 btnSend.onclick = showForm;
 btnSendButton.onclick = showForm;
 btnSendClose.onclick = showForm;
+
+// ENVIAR AJAX
+
+//funcion ajax de registrar 
+$('#sendEmail').click(function(){
+  //onkeyup validar correo"
+  emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;  
+  if(!emailRegex.test(document.querySelector('#txCorreo').value)){ 
+      $("#aviso").html('<h4 class="warning"><i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i> Ingrese un correo válido.</h4>')
+  }
+  /* else if($("#txNombres").val().length ==0 || $("#txAsunto").val().length ==0 | $("#txMensaje").val().length ==0){
+      $("#aviso").html('<h4 class="warning"><i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i> Por favor. Complete todos los datos.</h4>')
+  } */
+  else{
+      var datos=$('#formSend').serialize();
+      $.ajax({
+          type: "POST",
+          url: "send_email.php",
+          data: datos,
+
+          success: function (r) {
+              $("#aviso").html(r);                      
+          }
+      });
+  }
+  return false;
+}) 
+
+document.getElementById('txCorreo').addEventListener('input', function() {
+  campo = event.target;
+  
+  emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+  if (emailRegex.test(campo.value)) {
+      $("#aviso").html('<h4 class="ok"><i class="fa-solid fa-check"></i> Correo válido.</h4>')
+  } else {
+      $("#aviso").html('<h4 class="warning"><i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i> Ingrese un correo válido.</h4>')
+  }
+});

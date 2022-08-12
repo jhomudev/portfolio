@@ -84,9 +84,6 @@
 .title {
   margin: 15px auto;
 }
-html {
-  scroll-behavior: smooth;
-}
 /*?  HEADER */
 header {
   width: 100%;
@@ -312,6 +309,14 @@ section {
   cursor: pointer;
   filter: brightness(90%);
   -webkit-filter: brightness(90%);
+}
+.boxSend form span .ok {
+  font-size: 13px;
+  color:var(--blue);
+}
+.boxSend form span .warning {
+  font-size: 13px;
+  color:var(--red);  
 }
 
 /* ! finish email */

@@ -14,15 +14,15 @@
 
 <body>
     <header id="nav">
-        <a class="icono" href="index.php">
+        <a class="icono" href="index.html">
             <img src="img/DevMc.svg" alt="logotype" id="icono-owl">
         </a>
         <ul class="menu">
-            <li class="btn-nav"><a href="#about-me">Sobre mí</a></li>
-            <li class="btn-nav"><a href="#skills">Skills</a></li>
-            <li class="btn-nav"><a href="#services">Servicios</a></li>
-            <li class="btn-nav"><a href="#projects">Proyectos</a></li>
-            <li class="btn-nav"><a href="#contacts">Contactos</a></li>
+            <li class="btn-nav"><a class="desplazar" href="#about-me">Sobre mí</a></li>
+            <li class="btn-nav"><a class="desplazar" href="#skills">Skills</a></li>
+            <li class="btn-nav"><a class="desplazar" href="#services">Servicios</a></li>
+            <li class="btn-nav"><a class="desplazar" href="#projects">Proyectos</a></li>
+            <li class="btn-nav"><a class="desplazar" href="#contacts">Contactos</a></li>
             <li id="btn-email"><button>Envíame un correo</button></li>
         </ul>
         <div class="bar cursor-pointer"><i class="fas fa-bars"></i></div>
@@ -34,57 +34,25 @@
         <div id="btnCerrar"><i class="fas fa-xmark"></i></div>
         <span class="text-center text-2 bold">Envíame un correo</span>
         <p class="text-3">Envíame un email y comunícate conmigo. Déjame tus datos y te contactaré.</p>
-        <form action="index.php" method="post">
+        <form id="formSend">
             <div class="campo">
                 <label for="" class="text-3">Tu Nombre</label>
-                <input type="text" name="txNombres" value="fghfgh" required>
+                <input type="text" name="txNombres" id="txNombres" required>
             </div>
             <div class="campo">
                 <label for="" class="text-3">Tu Correo</label>
-                <input type="email" name="txCorreo" required>
+                <input type="email" name="txCorreo" id="txCorreo" required>
             </div>
             <div class="campo">
                 <label for="" class="text-3">Asunto</label>
-                <input type="text" name="txAsunto" value="gfhfgh" required>
+                <input type="text" name="txAsunto" id="txAsunto" required>
             </div>
             <div class="campo">
                 <label for="" class="text-3">Tu Mensaje</label>
-                <textarea name="txMensaje" cols="30" rows="10" required></textarea>
+                <textarea name="txMensaje" id="txMensaje" cols="30" rows="10" required></textarea>
             </div>
-            <?php 
-                if($_POST){
-                    $correo=$_POST["txCorreo"];
-                    $nombres=$_POST["txNombres"];
-                    $mensaje=$_POST["txMensaje"];
-                                    
-                    $asunto=$_POST["txAsunto"];
-                    $cuerpo='
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                    </head>      
-                    <body>
-                    <h2>De : </h2> <span style="color:blue;">'.$nombres.'</span> 
-                    <h2>Correo : </h2> <span style="color:blue;">'.$correo.'</span> 
-                    <p>'.$mensaje.'</p>  
-                    </body>
-                    </html>
-                    ';
-                    $cabecera="MIME-Version: 1.0\r\n";
-                    $cabecera.="Content-type: text/html; charset=iso-8859-1\r\n";
-                    $miCorreo="jhonancalebm@gmail.com";
-                    if(mail($miCorreo,$asunto,$cuerpo,$cabecera)){
-                        echo'
-                        <p class="send-message text-3"><i class="fas fa-check"></i> Mensaje enviado.</p>
-                        ';
-                    }else{
-                        echo'
-                        <p class="send-message-error text-3"><i class="fas fa-triangle-exclamation"></i> Al parecer hubo un error.</p>
-                        ';
-                    } 
-                }
-            ?>
-            <input type="submit" value="Enviar correo" class="submit">
+            <span id="aviso"></span>
+            <input type="submit" value="Enviar correo" class="submit" id="sendEmail">
         </form>
     </div>
     <section class="about-me" id="about-me">
@@ -106,7 +74,7 @@
                             <li class="text-3"><a class="decoration-none" href="" target="_blank">Descargar CV</a></li>
                         </ul>
                     </button>
-                    <button class="hire bold border-none" onclick="location.href='https:#contacts'" style="--color:var(--orange);color:var(--dark-blue)"><i class="fa-solid fa-file-contract"></i> Contáctame
+                    <button class="hire bold border-none desplazar" onclick="location.href='https:#contacts'" style="--color:var(--orange);color:var(--dark-blue)"><i class="fa-solid fa-file-contract"></i> Contáctame
                     </button>
                 </div>
             </div>
@@ -115,7 +83,7 @@
                     <img src="img/perfil.jpg" alt="">
                     <h2 class="orange">DESARROLLADOR WEB</h2>
                     <h2 class="cyan">DevMc</h2>
-                    <button onclick="location.href='https:#contacts'" class="border-none text-2 bold">Contáctame</button>
+                    <button onclick="location.href='https:#contacts'" class="border-none text-2 bold desplazar">Contáctame</button>
                 </div>
             </div>
         </div>
@@ -166,7 +134,7 @@
                 <div class="descri">
                     <h3 class="text-2 sky bold">Diseño creativo</h3>
                     <p class="text-3">Un buen diseño web atractivo le ayuda a mantener sus clientes potenciales en su sitio, que es el cara de tu negocio.</p>
-                    <a href="#contacts" class="orange bold">Contáctame<i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame<i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </article>      
             <article style="--color:var(--blue);">
@@ -176,7 +144,7 @@
                 <div class="descri">
                     <h3 class="text-2 sky bold">Desarrollo y mantenimiento</h3>
                     <p class="text-3">Conozco la importancia del diseño web y puedo ayudarte con el desarrollo y mantenimiento de tu sitio web.</p>
-                    <a href="#contacts" class="orange bold">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </article>      
             <article style="--color:var(--purple);">
@@ -186,7 +154,7 @@
                 <div class="descri">
                     <h3 class="text-2 sky bold">Integración de redes sociales</h3>
                     <p class="text-3">Hoy en día la gente esta conectada en las redes sociales y por eso la  presencia de tus redes en tu sitio web es importante.</p>
-                    <a href="#contacts" class="orange bold">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </article>      
             <article style="--color:var(--red);">
@@ -196,7 +164,7 @@
                 <div class="descri">
                     <h3 class="text-2 sky bold">Funcionamiento eficaz</h3>
                     <p class="text-3"> Es escencial un buen funcionamiento y estabilidad en tu sitio. Esto retiene a las personas.</p>
-                    <a href="#contacts" class="orange bold">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </article>      
             <article style="--color:var(--green);">
@@ -206,7 +174,7 @@
                 <div class="descri">
                     <h3 class="text-2 sky bold">Diseño Responsivo</h3>
                     <p class="text-3">Tu sitio debe verse bien no solo en computadoras. Hoy en día los móviles son más comunes asi que es necesario adapatar tu sitio con un modo responsivo adaptable al tamaño de dichos dispositivos.</p>
-                    <a href="#contacts" class="orange bold">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#contacts" class="orange bold desplazar">Contáctame <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </article>                              
         </div>
@@ -249,11 +217,11 @@
         <div class="secciones">
             <h2 class="text-2">Secciones</h2>
             <ul class="decoration-none">
-                <li><a href="#about-me">Sobre mí</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contacts">Contactos</a></li>
+                <li><a class="desplazar" href="#about-me">Sobre mí</a></li>
+                <li><a class="desplazar" href="#skills">Skills</a></li>
+                <li><a class="desplazar" href="#services">Servicios</a></li>
+                <li><a class="desplazar" href="#projects">Proyectos</a></li>
+                <li><a class="desplazar" href="#contacts">Contactos</a></li>
             </ul>
         </div>
         <div class="contactos" id="contacts">
