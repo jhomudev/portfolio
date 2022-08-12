@@ -252,15 +252,6 @@ section {
   color: var(--light);
   cursor: pointer;
 }
-.boxSend form p.send-message {
-  color: var(--blue);
-}
-.boxSend form p.send-message-error {
-  color: var(--red);
-}
-.boxSend span {
-  color: var(--blue);
-}
 .boxSend form {
   display: flex;
   flex-direction: column;
