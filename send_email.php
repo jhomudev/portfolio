@@ -15,8 +15,12 @@
         <head>
         </head>      
         <body>
-        <strong>De : </strong> <span style="color:blue;">'.$nombres.'</span></br> 
-        <strong>Correo : </strong> <span style="color:blue;">'.$correo.'</span></br> 
+        <h3>
+            <strong>De : </strong> <span style="color:blue;">'.$nombres.'</span> 
+        </h3>
+        <h3>
+            <strong>Correo : </strong> <span style="color:blue;">'.$correo.'</span>
+        </h3> 
         <p>'.$mensaje.'</p>  
         </body>
         </html>
@@ -28,7 +32,9 @@
             $res='
             <h4 class="ok"><i class="fas fa-check"></i> Mensaje enviado.</h4>
             <script>
-            reload();
+                setTimeout(function(){
+                  location.reload()
+                },1200)
             </script>
             ';
         }else{

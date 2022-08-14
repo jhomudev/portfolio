@@ -47,15 +47,6 @@ btnSend.onclick = showForm;
 btnSendButton.onclick = showForm;
 btnSendClose.onclick = showForm;
 
-// RECARGAR PAGINA
-function reload() {
-  setTimeout(function(){
-    location.reload()
-  },1200)
-  
-}
-
-
 // ENVIAR AJAX
 
 //funcion ajax de registrar 
@@ -65,9 +56,6 @@ $('#sendEmail').click(function(){
   if(!emailRegex.test(document.querySelector('#txCorreo').value)){ 
       $("#aviso").html('<h4 class="warning"><i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i> Ingrese un correo válido.</h4>')
   }
-  /* else if($("#txNombres").val().length ==0 || $("#txAsunto").val().length ==0 | $("#txMensaje").val().length ==0){
-      $("#aviso").html('<h4 class="warning"><i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i> Por favor. Complete todos los datos.</h4>')
-  } */
   else{
       var datos=$('#formSend').serialize();
       $.ajax({
