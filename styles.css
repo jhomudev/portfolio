@@ -462,7 +462,7 @@ section {
 .about-me .contain .letras .buttons .btn {
   position: relative;
   padding: 10px 14px;
-  width: 12em;
+  width: 10em;
   height: 3em;
   font-size: var(--size);
   transition: all 0.3s;
