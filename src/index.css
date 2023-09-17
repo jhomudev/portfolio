@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container-block {
+  @apply w-full container mx-auto px-3 text-mylight;
+}
+.section-title{
+  @apply uppercase font-dosis text-2xl text-mygold font-semibold -tracking-tighter
+}
+.section-subtitle{
+  @apply text-xl font-kumbh font-semibold
+}

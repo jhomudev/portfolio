@@ -7,7 +7,20 @@ export default {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        nunito: ['"Nunito Sans"', 'sans-serif'],
+        kumbh: ['"Kumbh Sans"', 'sans-serif'],
+        dosis: ['"Dosis"', 'sans-serif']
+      },
+      colors: {
+        mygold: '#febd59',
+        myaquamarine: '#00c2cb',
+        mydarkblue: '#141C44',
+        mydark: '#000b18',
+        mylight: '#f1eef2'
+      }
+    }
   },
   darkMode: 'class',
   plugins: [nextui()]

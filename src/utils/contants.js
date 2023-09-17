@@ -1,0 +1,6 @@
+export const MY_GITHUB_PAGES_LINK = 'https://jhonancaleb.github.io'
+export const MY_GITHUB_REPO_LINK = 'https://github.com/jhonancaleb'
+export const MY_LINKEDIN_PROFILE_LINK = 'https://www.linkedin.com/in/jhonancalebmc'
+export const MY_GITHUB_PROFILE_LINK = 'https://github.com/jhonancaleb'
+export const MY_EMAIL_LINK = 'jhonanmc2003@gmail.com'
+export const MY_ONLINE_CV_URL = 'https://jhonancaleb.github.io/'
