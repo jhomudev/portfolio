@@ -1,31 +1,19 @@
-import { useEffect } from 'react'
 import Header from './components/Header'
-import scrollToSection from './utils/scrollToSection'
-import useSectionContext from './hooks/useSectionContext'
-import useSections from './hooks/useSections'
-import NavbarBottom from './components/NavbarBottom'
 import { Toaster } from 'sonner'
 import Footer from './components/Footer'
+import { Outlet } from 'react-router-dom'
+import ParticlesContainer from './components/ParticlesContainer'
 
 function App () {
-  const { section, homeRef, aboutRef, proyectsRef, contactRef, servicesRef } = useSectionContext()
-  const { AboutSection, ContactSection, HomeSection, ProyectsSection, ServicesSection } = useSections()
-
-  useEffect(() => {
-    scrollToSection(section)
-  }, [section])
-
   return (
     <>
-      <div className='dark container-all min-h-screen font-nunito bg-gradient-to-r from-mydark to-mydarkblue'>
+      <div className='dark relative container-all min-h-screen font-nunito bg-gradient-to-r from-mydark to-mydarkblue'>
         <Header />
-        <HomeSection refSection={homeRef} />
-        <AboutSection refSection={aboutRef} />
-        <ServicesSection refSection={servicesRef} />
-        <ProyectsSection refSection={proyectsRef} />
-        <ContactSection refSection={contactRef} />
+        <div className='relative z-10'>
+          <Outlet />
+        </div>
         <Footer />
-        <NavbarBottom />
+        <ParticlesContainer />
         <Toaster richColors />
       </div>
     </>

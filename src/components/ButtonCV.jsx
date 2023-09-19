@@ -2,11 +2,11 @@ import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link } f
 import { MY_ONLINE_CV_URL } from '../utils/contants'
 import { myCv } from '../utils/media'
 
-const ButtonCV = () => {
+const ButtonCV = ({ className = '' }) => {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button variant='flat' color='warning'>Descargar CV</Button>
+        <Button className={className} variant='flat' color='warning'>Descargar CV</Button>
       </DropdownTrigger>
       <DropdownMenu aria-label='cv options download'>
         <DropdownItem key='online' as={Link} href={MY_ONLINE_CV_URL} target='_blank'>Ver CV Online</DropdownItem>

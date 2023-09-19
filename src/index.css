@@ -4,11 +4,14 @@
 @tailwind utilities;
 
 .container-block {
-  @apply w-full container mx-auto px-3 text-mylight;
+  @apply w-full container mx-auto px-5 text-mylight;
 }
 .section-title{
   @apply uppercase font-dosis text-2xl text-mygold font-semibold -tracking-tighter
 }
 .section-subtitle{
   @apply text-xl font-kumbh font-semibold
+}
+.after-item-navbar{
+  @apply after:absolute after:content-[""] after:bg-myaquamarine after:block after:w-[5px] after:h-[5px] after:rounded-full after:-bottom-3 after:left-[45%];
 }
