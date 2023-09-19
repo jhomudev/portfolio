@@ -5,7 +5,6 @@ import lottieAnimationProject from '../assets/Lotte-files/animation-project.json
 import myProfilePhoto from '../assets/img/perfil-photo-bg-t.png'
 import servicesImg from '../assets/img/services.png'
 import programmerImg from '../assets/img/programmer-t.png'
-import bgExplosion from '../assets/img/bg-explosion.png'
 // proyects img
 import projectCrudImage from '../assets/proyects-img/app-crud.png'
 import projectMoviesImage from '../assets/proyects-img/app-movies.png'
@@ -38,7 +37,6 @@ export {
   lottieAnimationProject,
   myCv,
   myProfilePhoto,
-  bgExplosion,
   servicesImg,
   programmerImg,
   projectSysfacImage,
