@@ -8,8 +8,7 @@ const ListProjects = () => {
       scale: 1,
       opacity: 1,
       transition: {
-        type: 'spring',
-        stiffness: 100,
+        type: 'tween',
         delay: i * 0.2
       }
     }),

@@ -5,11 +5,12 @@ import { motion } from 'framer-motion'
 
 function AboutSection ({ refSection }) {
   return (
-    <section ref={refSection} className='container-block pt-[10vw] py-[10vh] flex flex-col md:flex-row gap-10 items-start justify-center'>
+    <section ref={refSection} className='container-block pt-[10vw] py-[10vh] flex flex-col md:flex-row gap-10 items-start justify-center overflow-x-hidden'>
       <motion.div
         className='block-1 w-full max-w-[400px] mx-auto'
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ type: 'spring', stiffness: 100 }}
       >
         <img className='w-full h-full object-fill' src={myProfilePhoto} alt='perfil Pohto Jhonan Muñoz' />
@@ -18,6 +19,7 @@ function AboutSection ({ refSection }) {
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ type: 'spring', stiffness: 100, duration: 3 }}
         >
           <h1 className='section-title'>Sobre mí</h1>
@@ -27,6 +29,7 @@ function AboutSection ({ refSection }) {
           className='text-medium mt-3'
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, easy: 'easyOut' }}
         >
           Apasionado desarrollador con una profunda fascinación por la tecnología y la creatividad.

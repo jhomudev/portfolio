@@ -29,13 +29,14 @@ const TechsChips = ({ title = '', techs = [], color }) => {
                 variants={variants}
                 initial='hidden'
                 whileInView='visible'
+                viewport={{ once: true }}
               >
                 <Chip variant='dot' color={color}>{tech}</Chip>
               </motion.li>
             ))
             : (
               <Chip
-                custom={1} variants={variants} initial='hidden' whileInView='visible'
+                custom={1} variants={variants} initial='hidden' whileInView='visible' viewport={{ once: true }}
                 variant='bordered' radius='sm' color='default'
               >
                 ...

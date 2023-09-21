@@ -5,11 +5,12 @@ import { motion } from 'framer-motion'
 
 function ContactSection ({ refSection }) {
   return (
-    <section ref={refSection} className='container-block min-h-screen flex flex-col lg:flex-row gap-10 items-center justify-center'>
+    <section ref={refSection} className='container-block min-h-screen flex flex-col lg:flex-row gap-10 items-center justify-center overflow-x-hidden'>
       <div className='block-1 w-full sm:w-min flex items-center flex-row lg:flex-col'>
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, easy: 'easyIn' }}
         >
           <h1 className='section-title'>Contáctame</h1>
@@ -18,6 +19,7 @@ function ContactSection ({ refSection }) {
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1, rotate: 360 }}
+          viewport={{ once: true }}
           transition={{ type: 'spring', stiffness: 100 }}
         >
           <Lottie className='w-[100px] sm:w-[200px] lg:w-[400px]' animationData={lottieAnimationSend} loop />

@@ -42,16 +42,17 @@ const ProjectView = () => {
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, easy: 'easyIn' }}
         >
           <Image src={image} className='w-[min(100%,700px)]' isBlurred />
         </motion.div>
         <Divider />
         <div className='flex gap-3 items-center my-2'>
-          <motion.div variants={variantsButtons} initial='hidden' whileInView='visible'>
+          <motion.div variants={variantsButtons} initial='hidden' whileInView='visible' viewport={{ once: true }}>
             <Button isDisabled={!linkGithub} as={LinkNUI} href={linkGithub} target='_blank' variant='shadow' color='default' startContent={<FontAwesomeIcon icon={faGithub} />}> Github</Button>
           </motion.div>
-          <motion.div variants={variantsButtons} initial='hidden' whileInView='visible'>
+          <motion.div variants={variantsButtons} initial='hidden' whileInView='visible' viewport={{ once: true }}>
             <Button isDisabled={!linkPage} as={LinkNUI} href={linkPage} target='_blank' variant='shadow' color='success' startContent={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}> Demo</Button>
           </motion.div>
         </div>

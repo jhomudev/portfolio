@@ -8,6 +8,7 @@ const InitSection = () => {
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 1, easy: 'easyOut' }}
         className='flex flex-col gap-3'
       >
@@ -17,6 +18,7 @@ const InitSection = () => {
       <motion.figure
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ type: 'spring', stiffness: 100 }}
         className='w-52 sm:w-full min-w-[300px]'
       >

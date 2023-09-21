@@ -28,6 +28,7 @@ function Techs () {
               custom={id}
               initial='hidden'
               whileInView='visible'
+              viewport={{ once: true }}
               variants={variants}
             >
               <Tooltip color='foreground' content={`${tec.name} - ${tec.level}`}>

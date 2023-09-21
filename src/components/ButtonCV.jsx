@@ -6,7 +6,7 @@ const ButtonCV = ({ className = '' }) => {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button className={className} variant='flat' color='warning'>Descargar CV</Button>
+        <Button color='warning' variant='flat' className={className}>Descargar CV</Button>
       </DropdownTrigger>
       <DropdownMenu aria-label='cv options download'>
         <DropdownItem key='online' as={Link} href={MY_ONLINE_CV_URL} target='_blank'>Ver CV Online</DropdownItem>

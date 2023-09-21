@@ -6,11 +6,12 @@ import MyNetworks from '../../../../components/MyNetworks'
 
 function MainSection ({ refSection }) {
   return (
-    <section ref={refSection} className='relative container-block min-h-[calc(100vh_-_4rem)] flex flex-col-reverse md:flex-row gap-10 items-center justify-center'>
+    <section ref={refSection} className='relative container-block min-h-[calc(100vh_-_4rem)] flex flex-col-reverse md:flex-row gap-10 items-center justify-center overflow-x-hidden'>
       <main className='block-1 flex flex-col gap-1 max-w-[600px]'>
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 2, type: 'tween' }}
         >
           <strong className='text-5xl font-dosis font-bold'>JHONAN MUÑOZ</strong>
@@ -20,6 +21,7 @@ function MainSection ({ refSection }) {
         <motion.p
           initial={{ x: -90, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ type: 'spring', stiffness: 100 }}
           className='text-medium mt-2'
         >
@@ -33,6 +35,7 @@ function MainSection ({ refSection }) {
         className='block-2 grid place-items-center w-full max-w-[400px] overflow-hidden rounded-full'
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 2, type: 'tween' }}
       >
         <motion.img

@@ -6,11 +6,12 @@ import { motion } from 'framer-motion'
 
 function ServicesSection ({ refSection }) {
   return (
-    <section ref={refSection} className='container-block py-[10vh]  min-h-screen flex flex-col md:flex-row gap-10 justify-center'>
+    <section ref={refSection} className='container-block py-[10vh]  min-h-screen flex flex-col md:flex-row gap-10 justify-center overflow-x-hidden'>
       <div className='block-1 max-w-[600px] relative flex flex-col gap-2 flex-1'>
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 2, easy: 'easyOut' }}
         >
           <h1 className='section-title'>Mis servicios</h1>
@@ -19,6 +20,7 @@ function ServicesSection ({ refSection }) {
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ type: 'spring', stiffness: 100 }}
         >
           <Button as={Link} to='/projects' className='w-min mt-5' variant='ghost' color='secondary'>Ver proyectos</Button>
@@ -27,14 +29,13 @@ function ServicesSection ({ refSection }) {
           className='w-[min(100%,300px)] mx-auto'
           initial={{ scale: 0.3, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ type: 'spring', stiffness: 200 }}
         >
           <motion.img
             className='w-full h-full object-fill opacity-80 bg-blend-saturation'
             src={servicesImg}
             alt='coding person'
-            drag
-            dragConstraints={{ left: -50, top: -50, bottom: 50, right: 50 }}
           />
         </motion.div>
       </div>

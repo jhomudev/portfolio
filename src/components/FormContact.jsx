@@ -25,6 +25,7 @@ const FormContact = () => {
     <motion.form
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 1.3, easy: 'easyIn' }}
       onSubmit={handleSubmitForm}
       className='w-full sm:w-[500px] p-6 flex flex-col gap-5 border-mygold border-[1px] rounded-lg '

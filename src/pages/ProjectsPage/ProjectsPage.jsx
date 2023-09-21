@@ -3,7 +3,7 @@ import InitSection from './sections/InitSection'
 
 const ProjectsPage = () => {
   return (
-    <div className='container-block min-h-screen pt-10'>
+    <div className='container-block min-h-screen pt-10 overflow-x-hidden'>
       <InitSection />
       <br />
       <Outlet />

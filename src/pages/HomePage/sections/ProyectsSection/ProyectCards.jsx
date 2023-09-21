@@ -23,7 +23,7 @@ function ProyectCards () {
     <>
       {
       proyectsFilter.map((proyect, i) => (
-        <motion.article key={proyect.id} custom={i} variants={variants} initial='hidden' whileInView='visible'>
+        <motion.article key={proyect.id} custom={i} variants={variants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
           <Card
             isFooterBlurred
             radius='lg'
