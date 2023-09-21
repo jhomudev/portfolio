@@ -45,7 +45,7 @@ const CardJob = ({ jobTitle, types, modes, onPress }) => {
   }
 
   return (
-    <Card onPress={onPress} className='flex-[1_0_300px] max-w-[390px] p-5 text-left'>
+    <Card onPress={onPress} className='p-5 text-left'>
       <CardHeader className='block text-3xl text-center font-dosis uppercase'>
         <strong>{jobTitle}</strong>
       </CardHeader>

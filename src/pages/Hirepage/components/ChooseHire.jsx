@@ -2,6 +2,7 @@ import { Input } from '@nextui-org/react'
 import { jobPositions } from '../../../utils/contants'
 import CardJob from './CardJob'
 import useHireContext from '../hooks/useHireContext'
+import { motion } from 'framer-motion'
 
 const ChooseHire = () => {
   const { setContact, contact, errorEmptyContact } = useHireContext()
@@ -9,6 +10,19 @@ const ChooseHire = () => {
   const handleChangeContact = (e) => setContact(e.target.value)
 
   const handleClearContact = () => setContact('')
+
+  const variants = {
+    visible: i => ({
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        delay: i * 0.2
+      }
+    }),
+    hidden: { scale: 0, opacity: 0 }
+  }
 
   return (
     <>
@@ -26,19 +40,28 @@ const ChooseHire = () => {
         color={`${errorEmptyContact ? 'danger' : 'default'}`}
       />
       <br />
-      <div className='w-full flex flex-wrap items-center justify-center gap-5'>
+      <motion.ul className='w-full flex flex-wrap items-center justify-center gap-5'>
         {
-            jobPositions.map(job => (
+          jobPositions.map((job, id) => (
+            <motion.li
+              key={job.titleJob}
+              variants={variants}
+              custom={id}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true }}
+              className='flex-[1_0_300px] max-w-[390px]'
+            >
               <CardJob
-                key={job.titleJob}
+                // key={job.titleJob}
                 jobTitle={job.titleJob}
                 types={job.types}
                 modes={job.modes}
               />
-
-            ))
+            </motion.li>
+          ))
           }
-      </div>
+      </motion.ul>
     </>
   )
 }

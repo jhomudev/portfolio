@@ -1,24 +1,46 @@
+import { motion } from 'framer-motion'
 import { projects } from '../../../utils/contants'
 import CardProject from './CardProject'
 
 const ListProjects = () => {
+  const variants = {
+    visible: i => ({
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        delay: i * 0.2
+      }
+    }),
+    hidden: { scale: 0, opacity: 0 }
+  }
+
   return (
-    <main className='projetcs box grid gap-5 grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))]'>
+    <motion.main className='projetcs box grid gap-5 grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))]'>
       {
-        projects.map(project => (
-          <CardProject
+        projects.map((project, i) => (
+          <motion.article
             key={project.id}
-            id={project.id}
-            image={project.image}
-            name={project.name}
-            category={project.category}
-            linkGithub={project.linkGithub}
-            linkPage={project.linkPage}
-            techs={project.techs}
-          />
+            custom={i}
+            variants={variants}
+            initial='hidden'
+            animate='visible'
+          >
+            <CardProject
+              key={project.id}
+              id={project.id}
+              image={project.image}
+              name={project.name}
+              category={project.category}
+              linkGithub={project.linkGithub}
+              linkPage={project.linkPage}
+              techs={project.techs}
+            />
+          </motion.article>
         ))
       }
-    </main>
+    </motion.main>
   )
 }
 

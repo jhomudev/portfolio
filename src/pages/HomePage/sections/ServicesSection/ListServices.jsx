@@ -27,7 +27,7 @@ function ListServices () {
   return (
     <Accordion defaultExpandedKeys={myServices.map(service => service.key)} selectionMode='multiple' className='w-full'>
       {
-        myServices.map(service => (
+        myServices.map((service) => (
           <AccordionItem
             aria-expanded
             key={service.key}

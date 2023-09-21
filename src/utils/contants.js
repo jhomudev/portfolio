@@ -1,4 +1,4 @@
-import { projectCalcReactImage, projectCalcVanillaImage, projectCrudImage, projectEcomerceImage, projectMoviesImage, projectPazyBienImage, projectRadioImage, projectRepoImage, projectSysfacImage, projectTicTacToeImage, projectTodoListReactImage, projectTodoListTsImage } from './media'
+import { projectCalcReactImage, projectCalcVanillaImage, projectCrudImage, projectEcomerceImage, projectMoviesImage, projectPazyBienImage, projectRadioImage, projectRepoImage, projectSysfacImage, projectTicTacToeImage, projectTodoListReactImage, projectTodoListTsImage, techCss, techHtml, techJs, techMysql, techPhp, techReact, techTypescript } from './media'
 import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
@@ -286,5 +286,43 @@ export const jobPositions = [
       { id: crypto.randomUUID(), name: 'Contrato' },
       { id: crypto.randomUUID(), name: 'Freelance' }
     ]
+  }
+]
+
+export const techs = [
+  {
+    name: 'HTML',
+    img: techHtml,
+    level: 'Avanzado'
+  },
+  {
+    name: 'CSS',
+    img: techCss,
+    level: 'Intermedio'
+  },
+  {
+    name: 'JavaScript',
+    img: techJs,
+    level: 'Intermedio'
+  },
+  {
+    name: 'Typescript',
+    img: techTypescript,
+    level: 'Intermedio'
+  },
+  {
+    name: 'React JS',
+    img: techReact,
+    level: 'Intermedio'
+  },
+  {
+    name: 'PHP',
+    img: techPhp,
+    level: 'Intermedio'
+  },
+  {
+    name: 'MySql',
+    img: techMysql,
+    level: 'Intermedio'
   }
 ]

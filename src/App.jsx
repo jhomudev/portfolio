@@ -7,7 +7,7 @@ import ParticlesContainer from './components/ParticlesContainer'
 function App () {
   return (
     <>
-      <div className='dark relative container-all min-h-screen font-nunito bg-gradient-to-r from-mydark to-mydarkblue'>
+      <div className='dark relative container-all min-h-screen font-nunito bg-gradient-to-r from-mydark to-mydarkblue overflow-x-hidden'>
         <Header />
         <div className='relative z-10'>
           <Outlet />
