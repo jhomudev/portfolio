@@ -24,7 +24,6 @@ function MyNetworks ({ all }) {
       {
         networksMap.map((network, id) => {
           return (
-
             <motion.li
               key={network.name}
               custom={id}

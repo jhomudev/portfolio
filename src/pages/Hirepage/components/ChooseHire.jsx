@@ -53,7 +53,6 @@ const ChooseHire = () => {
               className='flex-[1_0_300px] max-w-[390px]'
             >
               <CardJob
-                // key={job.titleJob}
                 jobTitle={job.titleJob}
                 types={job.types}
                 modes={job.modes}
