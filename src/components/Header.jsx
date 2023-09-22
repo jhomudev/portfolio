@@ -4,6 +4,7 @@ import ButtonCV from './ButtonCV'
 import ButtonWorkWithMe from './ButtonWorkWithMe'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import { MY_GITHUB_PAGES_LINK } from '../utils/contants'
 
 const navbarItems = [
   {
@@ -34,7 +35,7 @@ const Header = () => {
           className='sm:hidden text-mylight'
         />
         <NavbarBrand className='flex items-center gap-3'>
-          <LinkNUI href='/' className='w-full'>
+          <LinkNUI href={`${MY_GITHUB_PAGES_LINK}/portfolio`} className='w-full'>
             <div className='w-12'>
               <img className='w-full h-full object-fill' src={myLogo} alt='logo jhonan muñoz' />
             </div>

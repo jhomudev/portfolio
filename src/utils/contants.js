@@ -102,8 +102,8 @@ export const projects = [
     name: 'Ecomerce Page',
     category: 'Desarrollo Frontend',
     image: projectEcomerceImage,
-    linkPage: `${MY_GITHUB_PAGES_LINK}/movie-api-react/`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/movie-api-react`,
+    linkPage: `${MY_GITHUB_PAGES_LINK}/ecomerce-react/`,
+    linkGithub: `${MY_GITHUB_REPO_LINK}/ecomerce-react`,
     techs: {
       descrip: 'React Js, Tailwind CSS, Javascript.',
       languages: ['HTML / JSX', 'CSS', 'Javascript'],
@@ -150,8 +150,8 @@ export const projects = [
     name: 'To do List - React',
     category: 'Desarrollo Frontend',
     image: projectTodoListReactImage,
-    linkPage: `${MY_GITHUB_PAGES_LINK}/movie-api-react/`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/movie-api-react`,
+    linkPage: `${MY_GITHUB_PAGES_LINK}/todo-list-react/`,
+    linkGithub: `${MY_GITHUB_REPO_LINK}/todo-list-react`,
     techs: {
       descrip: 'React Js, Tailwind CSS, Javascript.',
       languages: ['HTML / JSX', 'CSS', 'Javascript'],
