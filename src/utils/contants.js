@@ -55,13 +55,13 @@ export const projects = [
     category: 'Desarrollo Frontend',
     image: projectTodoListFramermotion,
     linkPage: `${MY_GITHUB_PAGES_LINK}/todo-framer_motion/`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/todo-framer_motiont`,
+    linkGithub: `${MY_GITHUB_REPO_LINK}/todo-framer_motion`,
     techs: {
       descrip: 'React Js, Tailwind CSS, Redux Toolkit.',
       languages: ['TypeScript', 'HTML / JSX', 'CSS'],
       frameworks: ['React Js', 'Tailwind CSS'],
-      libraries: ['Redux Toolkit', 'Sonner JS'],
-      others: []
+      libraries: ['Redux Toolkit', 'Framer Motion', 'Sonner JS'],
+      others: ['Vite Js']
     },
     date: Date('2023-09-25')
   },
@@ -77,7 +77,7 @@ export const projects = [
       languages: ['TypeScript', 'HTML / JSX', 'CSS'],
       frameworks: ['React Js', 'Tailwind CSS'],
       libraries: ['Redux Toolkit', 'Tremor', 'React Router Dom', 'Sonner JS'],
-      others: []
+      others: ['Vite Js']
     },
     date: Date('2023-09-14')
   },
@@ -93,7 +93,7 @@ export const projects = [
       languages: ['HTML / JSX', 'CSS', 'Javascript'],
       frameworks: ['React Js', 'Tailwind CSS'],
       libraries: ['Next UI'],
-      others: []
+      others: ['Vite Js']
     },
     date: '2023-09-03'
   },
