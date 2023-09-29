@@ -6,6 +6,7 @@ import myProfilePhoto from '../assets/img/perfil-photo-bg-t.png'
 import servicesImg from '../assets/img/services.png'
 import programmerImg from '../assets/img/programmer-t.png'
 // proyects img
+import projectWeatherTs from '../assets/proyects-img//app-weather-ts.png'
 import projectTodoListFramermotion from '../assets/proyects-img/app-todo-list-framer_motion.png'
 import projectCrudImage from '../assets/proyects-img/app-crud.png'
 import projectMoviesImage from '../assets/proyects-img/app-movies.png'
@@ -40,6 +41,7 @@ export {
   myProfilePhoto,
   servicesImg,
   programmerImg,
+  projectWeatherTs,
   projectTodoListFramermotion,
   projectSysfacImage,
   projectRepoImage,

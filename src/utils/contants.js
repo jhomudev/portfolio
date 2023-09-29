@@ -1,4 +1,4 @@
-import { projectCalcReactImage, projectCalcVanillaImage, projectCrudImage, projectEcomerceImage, projectMoviesImage, projectPazyBienImage, projectRadioImage, projectRepoImage, projectSysfacImage, projectTicTacToeImage, projectTodoListFramermotion, projectTodoListReactImage, projectTodoListTsImage, techCss, techHtml, techJs, techMysql, techPhp, techReact, techTypescript } from './media'
+import { projectCalcReactImage, projectCalcVanillaImage, projectCrudImage, projectEcomerceImage, projectMoviesImage, projectPazyBienImage, projectRadioImage, projectRepoImage, projectSysfacImage, projectTicTacToeImage, projectTodoListFramermotion, projectTodoListReactImage, projectTodoListTsImage, projectWeatherTs, techCss, techHtml, techJs, techMysql, techPhp, techReact, techTypescript } from './media'
 import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
@@ -49,6 +49,22 @@ export const networks = [
 
 // For projects page
 export const projects = [
+  {
+    id: 'weather-app-react-ts',
+    name: 'Weather App',
+    category: 'Desarrollo Frontend',
+    image: projectWeatherTs,
+    linkPage: `${MY_GITHUB_PAGES_LINK}/weather-app/`,
+    linkGithub: `${MY_GITHUB_REPO_LINK}/weather-app`,
+    techs: {
+      descrip: 'React Js, Typescript, Tailwind CSS, Next UI.',
+      languages: ['TypeScript', 'HTML / JSX', 'CSS'],
+      frameworks: ['React Js', 'Tailwind CSS'],
+      libraries: ['Next UI', 'Framer Motion'],
+      others: ['Openweathermap Api', 'Vite Js']
+    },
+    date: Date('2023-09-29')
+  },
   {
     id: 'todo-framer_motion',
     name: 'Todo List -  Framer Motion',
