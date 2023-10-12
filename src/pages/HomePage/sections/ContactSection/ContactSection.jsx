@@ -1,7 +1,7 @@
 import Lottie from 'lottie-react'
-import { lottieAnimationSend } from '../../../../utils/media'
-import FormContact from '../../../../components/FormContact'
 import { motion } from 'framer-motion'
+import FormContact from '@/components/FormContact'
+import { lottieAnimationSend } from '@/utils/media'
 
 function ContactSection ({ refSection }) {
   return (

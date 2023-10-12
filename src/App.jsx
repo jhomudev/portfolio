@@ -1,7 +1,7 @@
-import Header from './components/Header'
 import { Toaster } from 'sonner'
-import Footer from './components/Footer'
 import { Outlet } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import ParticlesContainer from './components/ParticlesContainer'
 
 function App () {

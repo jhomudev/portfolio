@@ -1,7 +1,7 @@
 import { Button, Card, CardBody, CardFooter, CardHeader, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from '@nextui-org/react'
-import useHireContext from '../hooks/useHireContext'
 import { toast } from 'sonner'
-import sendMail from '../../../utils/sendMail'
+import useHireContext from '../hooks/useHireContext'
+import sendMail from '@/utils/sendMail'
 
 const CardJob = ({ jobTitle, types, modes, onPress }) => {
   const {

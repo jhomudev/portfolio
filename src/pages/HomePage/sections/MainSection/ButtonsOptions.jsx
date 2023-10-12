@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import ButtonCV from '../../../../components/ButtonCV'
-import ButtonWorkWithMe from '../../../../components/ButtonWorkWithMe'
+import ButtonCV from '@/components/ButtonCV'
+import ButtonWorkWithMe from '@/components/ButtonWorkWithMe'
 
 function ButtonsOptions () {
   const variants = {

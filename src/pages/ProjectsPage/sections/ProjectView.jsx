@@ -4,8 +4,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faChevronLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { sortProjects } from '../../../utils/contants'
 import TechsChips from '../components/TechsChips'
+import { sortProjects } from '@/utils/constants'
 
 const ProjectView = () => {
   const { project } = useParams()

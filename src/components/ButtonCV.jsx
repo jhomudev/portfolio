@@ -1,6 +1,6 @@
+import { MY_ONLINE_CV_URL } from '@/utils/constants'
+import { myCv } from '@/utils/media'
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link } from '@nextui-org/react'
-import { MY_ONLINE_CV_URL } from '../utils/contants'
-import { myCv } from '../utils/media'
 
 const ButtonCV = ({ className = '' }) => {
   return (

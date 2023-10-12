@@ -1,5 +1,5 @@
+import { techs } from '@/utils/constants'
 import { Tooltip } from '@nextui-org/react'
-import { techs } from '../../../../utils/contants'
 import { motion } from 'framer-motion'
 
 function Techs () {

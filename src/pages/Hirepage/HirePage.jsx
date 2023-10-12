@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import FormContact from '../../components/FormContact'
-import MyNetworks from '../../components/MyNetworks'
 import ChooseHire from './components/ChooseHire'
+import MyNetworks from '@/components/MyNetworks'
+import FormContact from '@/components/FormContact'
 
 const HirePage = () => {
   return (

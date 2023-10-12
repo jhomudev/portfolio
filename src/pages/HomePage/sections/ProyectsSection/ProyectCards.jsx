@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Card, CardFooter, Image, Link, Tooltip } from '@nextui-org/react'
-import { sortProjects } from '../../../../utils/contants'
+import { sortProjects } from '@/utils/constants'
 
 function ProyectCards () {
   const proyectsFilter = sortProjects.slice(0, 3)

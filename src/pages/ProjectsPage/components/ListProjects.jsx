@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { projects } from '../../../utils/contants'
 import CardProject from './CardProject'
+import { projects } from '@/utils/constants'
 
 const ListProjects = () => {
   const variants = {

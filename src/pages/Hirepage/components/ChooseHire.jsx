@@ -1,5 +1,5 @@
 import { Input } from '@nextui-org/react'
-import { jobPositions } from '../../../utils/contants'
+import { jobPositions } from '../../../utils/constants'
 import CardJob from './CardJob'
 import useHireContext from '../hooks/useHireContext'
 import { motion } from 'framer-motion'

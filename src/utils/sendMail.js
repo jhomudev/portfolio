@@ -2,11 +2,7 @@
 import emailjs from '@emailjs/browser'
 const PUBLIC_KEY_EMAIL_JS = 'zb_KY6LIgeaicX5cr'
 const sendMail = ({ clientName, message, clientMail }) => new Promise((resolve, reject) => {
-  const params = {
-    clientName,
-    message,
-    clientMail
-  }
+  const params = { clientName, message, clientMail }
   emailjs.send('service_ivpldvl', 'template_c2smy24', params, PUBLIC_KEY_EMAIL_JS)
     .then(res => {
       console.log(res.text)

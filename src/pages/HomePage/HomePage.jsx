@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import useSectionContext from './hooks/useSectionContext'
 import useSections from './hooks/useSections'
-import scrollToSection from '../../utils/scrollToSection'
-import NavbarBottom from './../../components/NavbarBottom'
+import scrollToSection from '@/utils/scrollToSection'
+import NavbarBottom from '@/components/NavbarBottom'
 
 const HomePage = () => {
   const { section, mainRef, aboutRef, proyectsRef, contactRef, servicesRef } = useSectionContext()

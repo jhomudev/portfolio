@@ -1,7 +1,7 @@
+import { myProfilePhoto } from '@/utils/media'
 import Techs from './Techs'
-import { myProfilePhoto } from '../../../../utils/media'
-import ButtonWorkWithMe from '../../../../components/ButtonWorkWithMe'
 import { motion } from 'framer-motion'
+import ButtonWorkWithMe from '@/components/ButtonWorkWithMe'
 
 function AboutSection ({ refSection }) {
   return (

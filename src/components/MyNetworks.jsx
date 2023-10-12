@@ -1,6 +1,6 @@
 import { Button, Link, Tooltip } from '@nextui-org/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { networks as allNetworks } from '../utils/contants'
+import { networks as allNetworks } from '@/utils/constants'
 import { motion } from 'framer-motion'
 
 function MyNetworks ({ all }) {

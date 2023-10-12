@@ -1,6 +1,6 @@
+import { lottieAnimationProject } from '@/utils/media'
 import { motion } from 'framer-motion'
 import Lottie from 'lottie-react'
-import { lottieAnimationProject } from '../../../utils/media'
 
 const InitSection = () => {
   return (

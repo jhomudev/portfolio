@@ -1,10 +1,10 @@
 import { createHashRouter } from 'react-router-dom'
-import HomePage from './pages/HomePage/HomePage'
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage'
 import ListProjects from './pages/ProjectsPage/components/ListProjects'
 import ProjectView from './pages/ProjectsPage/sections/ProjectView'
 import HirePage from './pages/Hirepage/HirePage'
 import App from './App'
+import HomePage from './pages/HomePage/HomePage'
 
 const routes = [
   {

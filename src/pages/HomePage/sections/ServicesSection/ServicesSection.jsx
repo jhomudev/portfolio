@@ -1,8 +1,8 @@
 import { Button } from '@nextui-org/react'
 import ListServices from './ListServices'
-import { servicesImg } from '../../../../utils/media'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { servicesImg } from '@/utils/media'
 
 function ServicesSection ({ refSection }) {
   return (

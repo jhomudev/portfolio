@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import TypedPosition from './TypedPosition'
 import ButtonsOptions from './ButtonsOptions'
-import { myProfilePhoto } from '../../../../utils/media'
-import MyNetworks from '../../../../components/MyNetworks'
+import MyNetworks from '@/components/MyNetworks'
+import { myProfilePhoto } from '@/utils/media'
 
 function MainSection ({ refSection }) {
   return (

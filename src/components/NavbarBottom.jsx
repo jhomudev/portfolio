@@ -1,11 +1,18 @@
+import useSectionContext from '@/pages/HomePage/hooks/useSectionContext'
 import { faServicestack } from '@fortawesome/free-brands-svg-icons'
 import { faDiagramProject, faHome, faUserAstronaut, faComment } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Tab, Tabs } from '@nextui-org/react'
-import useSectionContext from '../pages/HomePage/hooks/useSectionContext'
 
 const NavbarBottom = () => {
-  const { mainRef, aboutRef, servicesRef, proyectsRef, contactRef, setSection } = useSectionContext()
+  const {
+    mainRef,
+    aboutRef,
+    servicesRef,
+    proyectsRef,
+    contactRef,
+    setSection
+  } = useSectionContext()
 
   const sections = [
     {
