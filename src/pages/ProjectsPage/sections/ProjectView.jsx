@@ -1,8 +1,8 @@
-import { Button, Divider, Image, Link as LinkNUI } from '@nextui-org/react'
+import { Button, Divider, Image, Link } from '@nextui-org/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faChevronLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import TechsChips from '../components/TechsChips'
 import { sortProjects } from '@/utils/constants'
@@ -26,7 +26,7 @@ const ProjectView = () => {
 
   return (
     <section className='w-auto'>
-      <LinkNUI as={Link} to='/projects' className='flex items-center gap-2' color='foreground'><FontAwesomeIcon icon={faChevronLeft} />Volver a proyectos</LinkNUI>
+      <Link href='#/projects' className='flex items-center gap-2' color='foreground'><FontAwesomeIcon icon={faChevronLeft} />Volver a proyectos</Link>
       <br />
       <main className='flex flex-col gap-3'>
         <motion.div
@@ -50,10 +50,10 @@ const ProjectView = () => {
         <Divider />
         <div className='flex gap-3 items-center my-2'>
           <motion.div variants={variantsButtons} initial='hidden' whileInView='visible' viewport={{ once: true }}>
-            <Button isDisabled={!linkGithub} as={LinkNUI} href={linkGithub} target='_blank' variant='shadow' color='default' startContent={<FontAwesomeIcon icon={faGithub} />}> Github</Button>
+            <Button isDisabled={!linkGithub} as={Link} href={linkGithub} target='_blank' variant='shadow' color='default' startContent={<FontAwesomeIcon icon={faGithub} />}> Github</Button>
           </motion.div>
           <motion.div variants={variantsButtons} initial='hidden' whileInView='visible' viewport={{ once: true }}>
-            <Button isDisabled={!linkPage} as={LinkNUI} href={linkPage} target='_blank' variant='shadow' color='success' startContent={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}> Demo</Button>
+            <Button isDisabled={!linkPage} as={Link} href={linkPage} target='_blank' variant='shadow' color='success' startContent={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}> Demo</Button>
           </motion.div>
         </div>
         <Divider />

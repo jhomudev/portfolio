@@ -16,26 +16,31 @@ const NavbarBottom = () => {
 
   const sections = [
     {
+      id: 'main',
       name: 'Home',
       icon: faHome,
       elementRef: mainRef
     },
     {
+      id: 'about-me',
       name: 'About me',
       icon: faUserAstronaut,
       elementRef: aboutRef
     },
     {
+      id: 'services',
       name: 'Services',
       icon: faServicestack,
       elementRef: servicesRef
     },
     {
+      id: 'projects',
       name: 'Proyects',
       icon: faDiagramProject,
       elementRef: proyectsRef
     },
     {
+      id: 'contacts',
       name: 'Contacts',
       icon: faComment,
       elementRef: contactRef

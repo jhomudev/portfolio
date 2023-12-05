@@ -2,7 +2,7 @@
 export { default as lottieAnimationSend } from '@/assets/Lottie-files/animation-send.json'
 export { default as lottieAnimationProject } from '@/assets/Lottie-files/animation-project.json'
 // img pages
-export { default as myProfilePhoto } from '@/assets/img/perfil-photo-bg-t.png'
+export { default as myProfilePhoto } from '@/assets/img/perfil-photo-bg.png'
 export { default as servicesImg } from '@/assets/img/services.png'
 export { default as programmerImg } from '@/assets/img/programmer-t.png'
 // proyects img

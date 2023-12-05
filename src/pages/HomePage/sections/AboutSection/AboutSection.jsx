@@ -13,7 +13,14 @@ function AboutSection ({ refSection }) {
         viewport={{ once: true }}
         transition={{ type: 'spring', stiffness: 100 }}
       >
-        <img className='w-full h-full object-fill' src={myProfilePhoto} alt='perfil Pohto Jhonan Muñoz' />
+        <img
+          className='w-full h-full object-fill'
+          style={{
+            borderRadius: '61% 39% 39% 61% / 50% 30% 70% 50% '
+          }}
+          src={myProfilePhoto}
+          alt='perfil Pohto Jhonan Muñoz'
+        />
       </motion.div>
       <div className='block-2 flex flex-col gap-2 max-w-[600px]'>
         <motion.div

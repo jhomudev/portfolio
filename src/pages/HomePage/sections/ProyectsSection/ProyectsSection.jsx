@@ -1,6 +1,5 @@
-import { Button } from '@nextui-org/react'
+import { Button, Link } from '@nextui-org/react'
 import ProyectCards from './ProyectCards'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 function ProyectsSection ({ refSection }) {
@@ -30,7 +29,7 @@ function ProyectsSection ({ refSection }) {
             viewport={{ once: true }}
             transition={{ type: 'spring', stiffness: 100 }}
           >
-            <Button as={Link} to='/projects' variant='shadow' color='success' className='w-min mt-2'>Ver todos los proyectos</Button>
+            <Button as={Link} href='#/projects' variant='shadow' color='success' className='w-min mt-2'>Ver todos los proyectos</Button>
           </motion.div>
         </div>
         <ProyectCards />

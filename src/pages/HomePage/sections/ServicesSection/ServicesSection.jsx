@@ -1,6 +1,5 @@
-import { Button } from '@nextui-org/react'
+import { Button, Link } from '@nextui-org/react'
 import ListServices from './ListServices'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { servicesImg } from '@/utils/media'
 
@@ -23,7 +22,7 @@ function ServicesSection ({ refSection }) {
           viewport={{ once: true }}
           transition={{ type: 'spring', stiffness: 100 }}
         >
-          <Button as={Link} to='/projects' className='w-min mt-5' variant='ghost' color='secondary'>Ver proyectos</Button>
+          <Button as={Link} href='#/projects' className='w-min mt-5' variant='ghost' color='secondary'>Ver proyectos</Button>
         </motion.div>
         <motion.div
           className='w-[min(100%,300px)] mx-auto'

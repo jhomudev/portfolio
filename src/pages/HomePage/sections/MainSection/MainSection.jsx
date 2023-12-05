@@ -42,6 +42,9 @@ function MainSection ({ refSection }) {
           src={myProfilePhoto}
           alt='photo perfil jhonan muñoz'
           className='relative z-10 w-full h-full object-fill'
+          style={{
+            borderRadius: '61% 39% 39% 61% / 50% 30% 70% 50%'
+          }}
         />
       </motion.div>
     </section>

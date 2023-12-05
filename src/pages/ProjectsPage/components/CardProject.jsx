@@ -1,8 +1,7 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Card, CardHeader, CardBody, Image, CardFooter, Button, Link as LinkNUI } from '@nextui-org/react'
-import { Link } from 'react-router-dom'
+import { Card, CardHeader, CardBody, Image, CardFooter, Button, Link } from '@nextui-org/react'
 
 const CardProject = ({ id, image, name, techs, category, linkGithub, linkPage }) => {
   return (
@@ -21,9 +20,9 @@ const CardProject = ({ id, image, name, techs, category, linkGithub, linkPage })
         />
       </CardBody>
       <CardFooter className='flex items-center gap-2'>
-        <Button as={Link} to={id} variant='ghost' color='danger' className='mr-auto'>Detalles</Button>
-        <Button as={LinkNUI} href={linkGithub} isDisabled={!linkGithub} target='_blank' variant='faded' color='default' size='sm' isIconOnly><FontAwesomeIcon icon={faGithub} /></Button>
-        <Button as={LinkNUI} href={linkPage} isDisabled={!linkPage} target='_blank' variant='faded' color='default' size='sm' isIconOnly><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></Button>
+        <Button as={Link} href={`#/projects/${id}`} variant='ghost' color='danger' className='mr-auto'>Detalles</Button>
+        <Button as={Link} href={linkGithub} isDisabled={!linkGithub} target='_blank' variant='faded' color='default' size='sm' isIconOnly><FontAwesomeIcon icon={faGithub} /></Button>
+        <Button as={Link} href={linkPage} isDisabled={!linkPage} target='_blank' variant='faded' color='default' size='sm' isIconOnly><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></Button>
       </CardFooter>
     </Card>
   )
