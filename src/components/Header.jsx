@@ -1,10 +1,9 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link as LinkNUI, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from '@nextui-org/react'
 import ButtonWorkWithMe from './ButtonWorkWithMe'
-import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import ButtonCV from './ButtonCV'
-import { MY_GITHUB_PAGES_LINK } from '@/utils/constants'
 import { mylogo } from '@/utils/media'
+import { NavLink } from 'react-router-dom'
 
 const navbarItems = [
   {
@@ -35,12 +34,12 @@ const Header = () => {
           className='sm:hidden text-mylight'
         />
         <NavbarBrand className='flex items-center gap-3'>
-          <LinkNUI href={`${MY_GITHUB_PAGES_LINK}/portfolio`} className='w-full'>
+          <Link href='/' className='w-full'>
             <div className='w-12'>
               <img className='w-full h-full object-fill' src={mylogo} alt='logo jhonan muñoz' />
             </div>
             <p className='w-[min(100%,100px)] font-bold text-inherit text-xl text-mygold font-dosis flex flex-col gap-0 leading-5'><span className='text-myaquamarine'>JHONAN</span> <span className='relative left-1/2'>MUÑOZ</span></p>
-          </LinkNUI>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className='hidden sm:flex gap-4' justify='start'>
