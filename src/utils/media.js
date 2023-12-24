@@ -21,7 +21,7 @@ export { default as projectSysfacImage } from '@/assets/proyects-img/app-sysfac.
 export { default as projectRepoImage } from '@/assets/proyects-img/app-repoo.png'
 export { default as projectPazyBienImage } from '@/assets/proyects-img/app-pazybien.png'
 // my cv
-export { default as myCv } from '@/assets/my_cv.pdf'
+export { default as myCv } from '@/assets/cv_jhonanmc.pdf'
 // tech img
 export { default as techMysql } from '@/assets/techs/mysql.png'
 export { default as techHtml } from '@/assets/techs/html.png'
